@@ -4,15 +4,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Little Girl</title>
     <link rel="SHORTCUT ICON" href="icon/heart.ico" type="image/x-icon" />
-    <meta name="description" content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3" />
-    <meta property="og:description" content="Hiệu ứng trình diễn ảnh 3D đẹp mắt chỉ với HTML5 và CSS3" />
-    <meta property="og:image" content="https://redirect.nhq.vn/demo/screenshot.png" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
     <script type="text/javascript" src="https://redirect.nhq.vn/demo/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/ruoi.js"></script>
+    <style>
+        .fixDT {
+            margin-top: 50%;
+        }
+    </style>
 </head>
 
 <body onload="start()">
+    <div id="checkDT"></div>
     <div id="container">
         <div id="stage">
             <div id="shape" class="cube backfaces">
@@ -32,14 +35,22 @@
         </div>
     </div>
     <div class="audio">
-        <audio id="player" controls autoplay>
-			<source src="music/anhnangcuaanh.mp3" type="audio/mpeg">
+        <audio controls autoplay>
+			<source src="anhnangcuaanh.mp3" type="audio/mpeg">
 		</audio>
     </div>
-
+    <script>
+        if (screen.width <= 1024) {
+            document.getElementById("checkDT").classList.add('fixDT');
+        } else {
+            if (document.getElementById("checkDT").classList.contains('fixDT')) {
+                document.getElementById("checkDT").classList.remove('fixDT');
+            }
+        }
+    </script>
     <!-- <script type="text/javascript">
         var audios = [
-            "music/anhnangcuaanh.mp3",
+            "https://gduexam.github.io/music/anhnangcuaanh.mp3"
         ];
         var music = document.getElementById("player");
         var getSrc = document.getElementsByTagName("source");
@@ -58,7 +69,9 @@
         });
         var firstPreload = new Image();
         firstPreload.src = "css/bg/2.jpg";
-	</script> -->
+    </script> -->
+
+
     <script>
         function start() {
             initsnow();
