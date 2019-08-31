@@ -1,2 +1,0 @@
-# gduexam.github.io
-hi
