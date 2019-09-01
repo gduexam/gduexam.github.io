@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -21,7 +20,7 @@
             text-align: center;
             -webkit-animation: linear infinite alternate;
             -webkit-animation-name: run;
-            -webkit-animation-duration: 15s;
+            -webkit-animation-duration: 40s;
         }
         
         .iconHeart {
@@ -36,7 +35,7 @@
         .panda1 {
             width: 80px;
             height: 80px;
-            background-image: url("panda.gif");
+            background-image: url("panda1.gif");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -114,7 +113,7 @@
     <div class="panda4"></div>
     <div class="panda5"></div>
 
-    <div id="mydiv" class="iconHeart" style="top:185px;left:375px">
+    <div id="mydiv" class="iconHeart" style="top:5px;left:375px;margin-left: 25%;margin-right: 50%">
         <nav>
             <input class="menu-toggler " type="checkbox">
             <label for=""></label>
@@ -160,8 +159,8 @@
         </div>
     </div>
     <div class="audio">
-        <audio id="player" controls autoplay>
-                <source src="music/anhnangcuaanh.mp3" type="audio/mpeg">
+        <audio id="player" autoplay controls>
+                <source src="music/anhnangcuaanh.mp3" type="audio/mp3">
             </audio>
     </div>
     <script>
@@ -173,6 +172,7 @@
             }
         }
     </script>
+
     <script type="text/javascript">
         var audios = [
             "music/anhnangcuaanh.mp3",
@@ -203,7 +203,7 @@
     <script>
         function start() {
             initsnow();
-            timedCount()
+            timedCount();
         }
     </script>
 
