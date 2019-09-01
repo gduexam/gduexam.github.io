@@ -103,27 +103,27 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
     t.style.borderRadius = '3px';
     t.style.boxShadow = '1px 1px 2px 1px #222222';
     t.style.display = 'none';
-    if (this.name == 'Nháº¡c Báº¥t Ruá»“i') {
-        $(t).html(this.name + " nĂ³i:\n" + '"Tá»‹ch tĂ  kiáº¿m phĂ¡p. Muá»‘n thĂ nh vĂµ cĂ´ng pháº£i xuá»‘ng kiáº¿m tá»± cung."');
-        this.gender = "Äá»±c";
-    } else if (this.name == 'LĂ½ Máº¡c Ruá»“i') {
-        $(t).html(this.name + " nĂ³i:\n" + '"Há»i tháº¿ gian tĂ¬nh lĂ  gĂ¬, mĂ  yĂªu thĂ¬ láº¡i pháº£i chá»‹ch?"');
-        this.gender = "CĂ¡i";
-    } else if (this.name == 'Äá»™c CĂ´ Ruá»“i') {
-        $(t).html(this.name + " nĂ³i:\n" + '"Tao Ä‘ang Ä‘i tĂ¬m tháº±ng DÆ°Æ¡ng QuĂ¡ Ä‘á»ƒ Ä‘Ă²i kiáº¿m!"');
-        this.gender = "Äá»±c";
+    if (this.name == 'Ruồi nhút nhát') {
+        $(t).html(this.name + " nói:\n" + '"Ngươi đang cười phải không ? Cười nhiều lên nhé vì ngươi cười rất đẹp"');
+        this.gender = "Đực";
+    } else if (this.name == 'Ruồi cool ngầu') {
+        $(t).html(this.name + " nói:\n" + '"Ngươi cười đẹp lắm"');
+        this.gender = "Đực";
+    } else if (this.name == 'Ruồi lãng tử') {
+        $(t).html(this.name + " nói:\n" + '"Đi khắp thể gian chỉ có 2 nụ cười làm ta muốn gục ngã là của NGƯƠI và gia đình ta vì vậy ngươi cười nhiều lên nhé"');
+        this.gender = "Cái";
     } else {
-        $(t).html(this.name + " nĂ³i:\n" + '"QuĂ¡ nhi Ă ! ChĂ ng Ä‘ang á»Ÿ Ä‘Ă¢u há»Ÿ.."');
-        this.gender = "CĂ¡i";
+        $(t).html(this.name + " nói:\n" + '"Ngươi có biết ngươi cười đẹp như thế nào không ? like.....sunshine"');
+        this.gender = "Đực";
     }
 
     var timeFlySay = 0;
     var flySay = setInterval(function() {
         timeFlySay++;
-        if (timeFlySay == 10) {
+        if (timeFlySay == 5) {
             t.style.display = 'block';
         }
-        if (timeFlySay == 20) {
+        if (timeFlySay == 40) {
             t.style.display = 'none';
             timeFlySay = 0;
             clearInterval(flySay);
@@ -133,7 +133,7 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
 
     f.appendChild(t);
 
-    f.title = this.name + "\nLoáº¡i: " + this.type + "\nMĂ u sáº¯c: " + this.color + "\nGiá»›i tĂ­nh: " + this.gender + "\nMĂ´n phĂ¡i: " + this.title;
+    f.title = this.name + "\nLoài: " + this.type + "\nMàu sắc: " + this.color + "\nGiới tính: " + this.gender + "\nTrường phái: " + this.title;
     f.id = fid;
     f.style.width = "50px";
     f.style.height = "50px";
@@ -155,37 +155,34 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
             var value_message = Math.floor(Math.random() * 10) + 1;
             switch (value_message) {
                 case 1:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"i za..Huynh Ă ! Huynh Ä‘ang Ä‘Ă¨ Muá»™i Ä‘Ă³, cĂ³ biáº¿t khĂ´ng háº£ !"')
+                    $(t).html(parent.name + " nói:\n" + '"Dù thế nào thì ta vẫn thích ngươi"')
                     break;
                 case 2:
-                    // $(t).html(parent.name + " nĂ³i:\n"+'"NgÆ°Æ¡i Ä‘Ă£ tuyá»‡t tĂ¬nh, cÅ©ng Ä‘á»«ng trĂ¡ch ta báº¥t nghÄ©a. NgĂ y nĂ y nÄƒm sau sáº½ lĂ  ngĂ y giá»— cá»§a ngÆ°Æ¡i"')
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Chung quy 16 nÄƒm háº¹n Æ°á»›c.. TĂ¬nh nĂ y váº«n trá»n theo thá»i gian."')
+                    $(t).html(parent.name + " nói:\n" + '"Vì nụ cười của ngươi nên ta tha mạng cho ngươi đó"')
                     break;
                 case 3:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Cho dĂ¹ ngÆ°Æ¡i chiáº¿m Ä‘Æ°á»£c thĂ¢n xĂ¡c ta nhÆ°ng mĂ£i cÅ©ng khĂ´ng chiáº¿m Ä‘Æ°á»£c tĂ¢m há»“n ta."')
+                    $(t).html(parent.name + " nói:\n" + '"mother"')
                     break;
                 case 4:
-                    // $(t).html(parent.name + " nĂ³i:\n"+'"Äa tĂ¬nh tá»± cá»• khĂ´ng dÆ° háº­n... DÄ© háº­n miĂªn miĂªn vĂ´ tuyá»‡t ká»³."')
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Ta á»Ÿ dÆ°á»›i Ä‘Ă¡y Tuyá»‡t tĂ¬nh cá»‘c.."')
+                    $(t).html(parent.name + " nói:\n" + '"father"')
                     break;
                 case 5:
-                    // $(t).html(parent.name + " nĂ³i:\n"+'"ÄĂ¨ em cÅ©ng Ä‘Æ°á»£c nhÆ°ng nhá»› bo nha a !"')
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Chung Nam SÆ¡n háº­u. Hoáº¡t Tá»­ NhĂ¢n má»™. Tháº§n ÄiĂªu Hiá»‡p Lá»¯. Tuyá»‡t tĂ­ch giang há»“."')
+                    $(t).html(parent.name + " nói:\n" + '"son"')
                     break;
                 case 6:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Láº¡i lĂ  ngÆ°Æ¡i. NhĂ  ngÆ°Æ¡i cĂ³ biáº¿n thĂ nh tro ta cÅ©ng nháº­n ra."')
+                    $(t).html(parent.name + " nói:\n" + '"Ta thích ngươi."')
                     break;
                 case 7:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Äáº¥t cĂ³ thá»• cĂ´ng, sĂ´ng cĂ³ hĂ  bĂ¡. ÄÆ°á»ng nĂ y do ta má»Ÿ. Ta muá»‘n bĂ² Ä‘Ă¢u ta bĂ²."')
+                    $(t).html(parent.name + " nói:\n" + '"Ta yêu ngươi"')
                     break;
                 case 8:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"PhĂ³ng háº¡ Ä‘á»“ Ä‘ao, láº­p Ä‘á»‹a thĂ nh pháº­t. ChĂ¢n lĂ½ Ä‘Æ¡n giáº£n váº­y láº½ nĂ o Ä‘áº¡i hiá»‡p láº¡i ko hiá»ƒu."')
+                    $(t).html(parent.name + " nói:\n" + '"Ta nhớ ngươi"')
                     break;
                 case 9:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"BuĂ´ng ta ra con tiá»‡n tá»³ nĂ y !"')
+                    $(t).html(parent.name + " nói:\n" + '"Ta ghét ngươi !"')
                     break;
                 case 10:
-                    $(t).html(parent.name + " nĂ³i:\n" + '"Äá»«ng mĂ . Thiáº¿p Ä‘ang mang trong mĂ¬nh cá»‘t nhá»¥c cá»§a chĂ ng..."')
+                    $(t).html(parent.name + " nói:\n" + '"Ta muốn hôn ngươi..."')
                     break;
             }
             if (parent.hasclick) {
@@ -197,7 +194,7 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
                 if (parent.hasclick) {
                     $(f).fadeOut(200);
                     f.style.backgroundImage = "url(" + fly_img + ")";
-                    f.title = parent.name + "\nLoáº¡i: " + parent.type + "\nMĂ u sáº¯c: " + parent.color + "\nGiá»›i tĂ­nh: " + parent.gender + "\nMĂ´n phĂ¡i: " + parent.title;
+                    f.title = parent.name + "\nLoài: " + parent.type + "\nMàu sắc: " + parent.color + "\nGiới tính: " + parent.gender + "\nTrường phái: " + parent.title;
                     $(f).fadeIn(500);
                     setTimeout(function() {
                         parent.flying();
@@ -255,7 +252,7 @@ function Fly(fid, type, color, sh, sw, x, y, fly_img, name, title) {
             hasswatter = false;
             parent.stop();
             parent.died = true;
-            f.title = "Click vĂ o giá»¯ 5s Ä‘á»ƒ há»“i sinh em Ä‘i anh...!";
+            f.title = "Giữ 5 giây ta sẽ hồi sinh chơi với ngươi ^^";
         } else {
             if (Math.random() < 0.3) {
                 f.style.cursor = 'url("https://redirect.nhq.vn/demo/js/images/flyswatter.png"), auto';
@@ -570,16 +567,16 @@ $(document).ready(function() {
         // Object Fly("ID", "Type", "Color", move_space_height, move_space_width, position_x, position_y, "flies_image_url");
         switch (value) {
             case 1:
-                var fly = new Fly("test", "Nháº·ng", "Xanh", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_11.png", "Tiá»ƒu Long Ruá»“i", "Cá»• Má»™");
+                var fly = new Fly("test", "Ruồi", "Xanh", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_11.png", "Ruồi nhút nhát", "Nhát gái");
                 break;
             case 2:
-                var fly = new Fly("test", "Ruá»“i", "Äen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "LĂ½ Máº¡c Ruá»“i", "Cá»• Má»™");
+                var fly = new Fly("test", "Ruồi", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "Ruồi cool ngầu", "Lạnh lùng");
                 break;
             case 3:
-                var fly = new Fly("test", "Ruá»“i", "Äá»", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/doc_co_ruoi.png", "Äá»™c CĂ´ Ruá»“i", "TiĂªu Dao");
+                var fly = new Fly("test", "Ruồi", "Xám", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/doc_co_ruoi.png", "Ruồi lãng tử", "Phiêu bồng");
                 break;
             case 4:
-                var fly = new Fly("test", "Nháº·ng", "NĂ¢u", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_9.png", "Nháº¡c Báº¥t Ruá»“i", "Hoa SÆ¡n");
+                var fly = new Fly("test", "Ruồi", "Nâu", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ruoi_9.png", "Ruồi chăm chỉ", "Mọt sách");
                 break;
 
         }
@@ -591,7 +588,7 @@ $(document).ready(function() {
         if (var_2) {
             if (Math.random() < show_percent_fly2 / 100) {
                 //console.log('fly 2 appear');
-                var fly2 = new Fly("test", "Nháº·ng", "Äen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "LĂ½ Máº¡c Ruá»“i", "Cá»• Má»™");
+                var fly2 = new Fly("test", "Nhặng", "Đen", height_fly, width_fly, 0, 0, "https://redirect.nhq.vn/demo/js/images/ly_mac_ruoi.png", "Ruồi nhút nhát", "Nhát gái");
                 fly2.move();
                 fly2.flying();
                 fly2.set_random_goaway(max_goaway_time);

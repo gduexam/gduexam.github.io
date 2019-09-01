@@ -7,9 +7,9 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 100vh;
-    min-height: 720px;
-    max-height: 1024px;
+    height: 73vh;
+    /* min-height: 720px;
+    max-height: 1024px; */
 }
 
 audio {
